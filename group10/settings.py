@@ -21,7 +21,7 @@ import dj_database_url
 SECRET_KEY = '7y_689gdm3@03)z!t8omri-un*2ttx1@&60x&8sm_k54ibl$9l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
