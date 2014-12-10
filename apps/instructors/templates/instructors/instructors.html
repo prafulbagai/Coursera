@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div class="row-fluid" style="padding:0px 20px 20px 20px">
+		<h3 >{{instructor.first_name}} {{instructor.last_name}}</h3>
+		<h5><a href="{{instructor.university.website}}"> {{instructor.university.name}}</a></h5>
+	</div>
+
+	<hr>
+	<br>
+
+	<div class="row-fluid" style="padding:0px 20px 20px 20px">
+		<div class="span6">
+			<h3>Introduction</h3> <br>
+			<p>{{instructor.details}}</p>
+		</div>
+
+		<div class="span6">
+			<div style="padding-left:200px">
+				<h3>Courses</h3> <br>
+				{% for course in course_list %}
+					<a href="/course/{{course.course.short_name}}">
+						<img src="/static/img/group10/{{course.course.image_link}}" width="200"><br><br>
+						{{course.course.name}}<br>
+					</a>
+					{{course.course.start_date}}<br>
+				{% endfor %}	
+			</div>
+			
+		</div>
+	</div>
+{% endblock %}

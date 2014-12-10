@@ -1,0 +1,272 @@
+/* Common Overrides
+-------------------------------------------------- */
+.brand-font {
+	font-family: 'Cilantro','Cilantro_IE', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.thumbnail {
+	margin: 20px 0;
+	padding:0 15px;
+	background-color:#fafafa;
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-touch-callout: none;
+   -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Carousel styles
+-------------------------------------------------- */
+.carousel-inner-list {
+	color: #fff;
+}
+
+
+/* -------------------------------------------------- */
+/* Site Coloring Scheme changes
+--------------------------------------------------------
+--------------------------------------------------------
+----------------------------------------------------- */
+
+body {
+  /*background-color: #e5e5e5;*/
+}
+
+.icon-white-bar {
+  background-color: #fff;
+}
+
+input {
+	vertical-align: middle;
+}
+
+/* class navbar styling
+-------------------------------------------------- */
+.navbar .brand {
+  color: #fff;
+  text-shadow: none;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #135753;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #eee;
+}
+.navbar .nav > li > a {
+  color: #fff;
+  text-shadow: none;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #135753;
+    color: #fff;
+}
+
+.navbar-inner {
+  background-color: #20938c;
+  background-image: -moz-linear-gradient(top, #20938c, #135753);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#20938c), to(#135753));
+  background-image: -webkit-linear-gradient(top, #20938c, #135753);
+  background-image: -o-linear-gradient(top, #20938c, #135753);
+  background-image: linear-gradient(to bottom, #20938c, #135753);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20938c', endColorstr='#ff135753', GradientType=0);
+}
+
+.navbar .btn-navbar {
+  background-color: #20938c;
+  *background-color: #20938c;
+  background-image: -moz-linear-gradient(top, #20938c, #135753);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#20938c), to(#135753));
+  background-image: -webkit-linear-gradient(top, #20938c, #135753);
+  background-image: -o-linear-gradient(top, #20938c, #135753);
+  background-image: linear-gradient(to bottom, #20938c, #135753);
+  border-color: #135753 #135753 #20938c;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20938c', endColorstr='#ff135753', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: #135753;
+  *background-color: #d9d9d9;
+}
+
+
+/* Class dropdown styling
+-------------------------------------------------- */
+
+.dropdown-menu {
+  background-color: #20938c;
+}
+
+.dropdown-menu > li > a {
+  color: #fff;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #ffffff;
+  background-color: #135753;
+  background-image: -moz-linear-gradient(top, #135753, #135753);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#135753), to(#135753));
+  background-image: -webkit-linear-gradient(top, #135753, #135753);
+  background-image: -o-linear-gradient(top, #135753, #135753);
+  background-image: linear-gradient(to bottom, #135753, #135753);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff135753', endColorstr='#ff135753', GradientType=0);
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  background-color: #135753;
+  background-image: -moz-linear-gradient(top, #135753, #135753);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#135753), to(#135753));
+  background-image: -webkit-linear-gradient(top, #135753, #135753);
+  background-image: -o-linear-gradient(top, #135753, #135753);
+  background-image: linear-gradient(to bottom, #135753, #135753);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff135753', endColorstr='#ff135753', GradientType=0);
+}
+
+.nav-header {
+  color: #f3f3f3;
+  text-shadow: none;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+
+.navbar .nav li.dropdown > a:hover .caret,
+.navbar .nav li.dropdown > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* <a> tag styling
+-------------------------------------------------- */
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #e08400;
+  text-decoration: underline;
+}
+a:focus,
+a:hover,
+a:active {
+  cursor: pointer;
+}
+
+/* class nav-tab styling
+-------------------------------------------------- */
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    border-color: #999 #999 transparent;
+    color: #e08400;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #999;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #f4f4f4;
+}
+
+/* class btn-custom styling
+-------------------------------------------------- */
+.btn-custom.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-custom {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #20938c;
+  *background-color: #135753;
+  background-image: -moz-linear-gradient(top, #20938c, #135753);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#20938c), to(#135753));
+  background-image: -webkit-linear-gradient(top, #20938c, #135753);
+  background-image: -o-linear-gradient(top, #20938c, #135753);
+  background-image: linear-gradient(to bottom, #20938c, #135753);
+  background-repeat: repeat-x;
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20938c', endColorstr='#ff135753', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.disabled,
+.btn-custom[disabled] {
+  color: #ffffff;
+  background-color: #135753;
+  *background-color: #135753;
+}
+
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #135753 \9;
+}
+
+/* Responsive styling
+-------------------------------------------------- */
+@media (max-width: 979px) {
+  .nav-collapse .nav .nav-header {
+    color: #f3f3f3;
+  }
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    color: #fff;
+  }
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .dropdown-menu a:hover,
+  .nav-collapse .dropdown-menu a:focus {
+    background-color: #135753;
+  }
+  .nav-collapse .nav .nav-header {
+    color: default;
+  }
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    color: default;
+  }
+}

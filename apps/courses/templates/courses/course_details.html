@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+	<div class="row-fluid" style="padding:20px 20px 20px 20px">
+		<div class="span6">
+			<br><br>
+			<img src="/static/img/group10/stanford.png">
+			<h2 style="padding-top:20px;">{{course.name}}</h2><br>
+			<p>{{course.short_description}}</p>
+		</div>
+		<div class="span6">
+			<br><br>
+			<video id="vjs_video_1_html5_api" class="vjs-tech" poster="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/3a/be3d7069b511e3830cedf92d7d8fd4/DataScientistsToolbox.jpg?auto=format&dpr=1&w=451" style="" preload="metadata" data-js="previewVideo" src="{{course.preview_link}}" controls="">
+				<source src="{{course.preview_link}}" type="video/mp4"></source>
+				<!--<source src="https://d1a2y8pfnfh44t.cloudfront.net/660ccce0851111e3a36ccd7596303339/full/540p/index.webm" type="video/webm"></source>-->
+			</video>
+			<!--<iframe  src="{{course.preview_link}}" width="450" height="250" frameborder="0" allowfullscreen ></iframe>-->
+		</div>
+		<br><br>
+	</div>
+	<hr>
+	<div class="row-fluid" style="padding:20px 20px 20px 20px">
+		<div class="span8">
+			<h3>About the Course</h3>
+			<p>{{course.about|safe}}</p><br>
+
+			<h3>Course Syllabus</h3>
+			<p>{{course.syllabus|safe}}</p><br>
+
+			<h3>Recommended Background</h3>
+			<p>{{course.recommended_background|safe}}</p><br>
+
+			<h3>Course Format</h3>
+			<p>{{course.format|safe}}</p><br>
+
+			<h3>FAQ</h3>
+			<p>{{course.faq|safe}}</p><br>
+		</div>
+
+		<div class="span4">
+			<h3>Sessions</h3>
+			<select>
+				{% for session in session_list %}
+					<option>{{session.start_date}} - {{session.end_date}}</option>
+				{% endfor %}		
+				<option>Future Sessions</option>
+			</select>
+
+			<h3>Course at a Glance</h3>
+			<b> Time Duration : </b>{{course.duration_string}}<br>
+			<b> Workload : </b>{{course.estimated_class_workload}}<br>
+			<b> Eligible for Certificates : </b>{{course.eligible_for_certificates}}<br>
+			<b> Language : </b>{{course.language}}
+
+			<h3>Instructors</h3>
+			<ul>
+				{% for instructor in instructor_list %}
+					<li>
+						<a href="/instructors/{{instructor.instructor.id}}">{{instructor.instructor.first_name}} {{instructor.instructor.last_name}}</a> ({{instructor.instructor.university.name}}) <br>
+
+					</li>	
+				{% endfor %}
+			</ul>
+
+			<h3>Categories</h3>
+				<ul>
+					{% for category in category_list %}
+						<li>{{category.category.name}} <br></li>
+					{% endfor %}
+				</ul>
+		</div>
+	</div>
+
+{% endblock %}
