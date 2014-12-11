@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div class="row-fluid" style="padding:20px 20px 20px 20px">
+		<div class="span2">
+			<img src="/static/img/group10/{{university.abbr_name}}.png">
+		</div>
+		<div class="span9">
+			<br><br>
+			<span style="font-size:30px;"><a href="{{university.website}}">{{university.name}}</a></span>
+			<br><br>
+			<p>{{university.description}}</p>
+		</div>
+	</div>
+	<hr>
+	<div class="row-fluid" style="padding:20px 20px 20px 20px">
+		<h3>Courses Offered</h3><hr>
+
+		{% for course in course_list %}
+		<div class="span2">
+			<a href="/course/{{course.short_name}}">
+				<img src="/static/img/group10/{{course.image_link}}" width="200"><br><br>
+				{{course.name}}<br>
+			</a><br>
+		</div>
+		{% endfor %}
+	</div>
+
+	<div class="row-fluid" style="padding:20px 20px 20px 20px">
+		<h3>Instructors</h3><hr>
+		<ul>
+			{% for instructor in instructor_list %}
+				<li><a href="/instructor/{{instructor.id}}">{{instructor.first_name}} {{instructor.last_name}}</a></li><br>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

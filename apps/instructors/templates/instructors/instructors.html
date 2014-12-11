@@ -3,7 +3,7 @@
 {% block content %}
 	<div class="row-fluid" style="padding:0px 20px 20px 20px">
 		<h3 >{{instructor.first_name}} {{instructor.last_name}}</h3>
-		<h5><a href="{{instructor.university.website}}"> {{instructor.university.name}}</a></h5>
+		<h5><a href="/university/{{instructor.university.id}}"> {{instructor.university.name}}</a></h5>
 	</div>
 
 	<hr>

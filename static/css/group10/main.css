@@ -1,11 +1,8 @@
 body {
-    background-color: #F5F5F5;
+    background-color: #F2F2F2;
 }
 
-#container{
-	background-color: white;	
-}
-
-.verticalLine {
-    border-left: thick solid #ff0000;
+#content{
+	background-color:white;
+	border:solid 3px #E1E1E1;
 }

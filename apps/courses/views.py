@@ -72,3 +72,8 @@ def course_detail(request,course_name):
 
 	ctx = {'course' : course_obj, 'instructor_list' : instructor_list, 'category_list' : category_list, 'session_list' : session_list}
 	return render(request, 'courses/course_details.html', ctx)	
+
+
+def about(request):
+	ctx = {}
+	return render(request, 'courses/about.html', ctx)	

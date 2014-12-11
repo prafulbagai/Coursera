@@ -13,15 +13,80 @@
 
         <link rel="stylesheet" type="text/css" href="{% static "css/vendor/bootstrap/bootstrap.css" %}"/>
         <link rel="stylesheet" type="text/css" href="{% static "css/vendor/bootstrap/bootstrap-responsive.css" %}"/>
-        <link rel="stylesheet" type="text/css" href="{% static "css/custom/bootstrap-override.css" %}"/>
         <link rel="stylesheet" type="text/css" href="{% static "css/vendor/jquery-ui/jquery-ui.css" %}"/>
         <link rel="stylesheet" type="text/css" href="{% static "css/group10/main.css" %}"/>
     </head>
     <body>
-        <div id="logo" style="padding-left:53px;">
-            <a href="/courses"><img src="{% static "img/group10/group10.png" %}"></a>
+        <div id="logo">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar icon-white-bar"></span>
+                            <span class="icon-bar icon-white-bar"></span>
+                            <span class="icon-bar icon-white-bar"></span>
+                        </a>
+                        <span class="brand brand-font"><a href="/courses" class="brand"><img src="{% static "img/group10/coursera.png" %}"></a></span><br>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li><a href="/courses"> Courses</a></li>
+                                <li><a href="/university"> Institutions</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/about"><span class="icon-off icon-white"></span> Overview</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        <div id="content" class="container" style="background-color:white;">{% block content %} {% endblock %}</div>
+
+        </div>
+
+        <div id="content" class="container" >{% block content %} {% endblock %}</div>
+        <div id="footer" class="container" style="padding:20px 20px 20px 80px;">
+            <div class="row-fluid">
+                <div class="span5">
+                    <img src="{% static "img/group10/coursera.png" %}"><br><br>
+                    <p style="font-size:16px;">Coursera provides universal access to the world’s best education, partnering with top universities and organizations to offer courses for anyone to take, for free. </p><br><br>
+
+                    © 2014 Coursera Inc. All rights reserved.             
+                </div>
+                <div class="span2">
+                    <div class="row-fluid">
+                        <p>
+                            <span style = "font-size:18px">COMPANY</span><br><br>
+                            <a href = "/about" >About</a><br><br>
+                            <a href = "https://www.coursera.org/about/people">People</a><br><br>
+                            <a href = "https://www.coursera.org/about/leadership">Leardership</a><br><br>
+                            <a href = "https://www.coursera.org/about/careers">Careers</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="span2">
+                    <p>
+                        <span style = "font-size:18px">FRIENDS</span><br><br>
+                        <a href = "/university">Partners</a><br><br>
+                        <a href = "https://www.coursera.org/about/community">Community</a><br><br>
+                        <a href = "https://www.coursera.org/about/programs">Programs</a><br><br>
+                        <a href = "https://tech.coursera.org/app-platform/">Devlopers</a><br><br>
+                        <a href = "https://www.coursera.org/about/translate">Translate</a>
+                    </p>
+                </div>
+                <div class="span3">
+                    <p>
+                        <span style = "font-size:18px">Connect</span><br><br>
+                        <a href = "https://plus.google.com/+Coursera">Google+</a><br><br>
+                        <a href = "http://facebook.com/Coursera">Facebook</a><br><br>
+                        <a href = "https://twitter.com/coursera">Twitter</a><br><br>
+                        <a href = "http://blog.coursera.org/">Blog</a><br><br>
+                        <a href = "https://tech.coursera.org/">Tech Blog</a></p>
+                </div>
+            </div>
+        </div>
     </body>
         <script type="text/javascript" src="{% static "js/vendor/jquery/jquery-1.9.1.min.js" %}" ></script>            
         <script type="text/javascript" src="{% static "js/vendor/bootstrap/bootstrap.js" %}" ></script>
