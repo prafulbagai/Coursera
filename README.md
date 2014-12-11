@@ -17,5 +17,7 @@ source venv/bin/activate
 
 7) If everything works well till now, you should now be good to go. Run python manage.py runserver.
 
-8) You can also have a look at the demo URL of the app (deployed on Heroku):- 
+8) Browse to `127.0.0.1:8000/courses`
+
+9) You can also have a look at the demo URL of the app (deployed on Heroku):- 
 https://infinite-retreat-7043.herokuapp.com/courses/
