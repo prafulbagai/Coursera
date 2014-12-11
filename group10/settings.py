@@ -74,7 +74,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-#DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -136,5 +136,3 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_ROOT = 'staticfiles'
-
-
