@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 
-	<div class="row-fluid" style="padding:20px 0px 20px 0px">
+	<div class="row-fluid" style="padding:20px 0px 0px 0px">
 		<div class="span7" style="text-align:center;">
 			<br>
 			<a href="/university/{{course.university.id}}"><img src="/static/img/group10/stanford.png" style="border:solid 6px #E1E1E1;"></a>
@@ -11,10 +11,19 @@
 		</div>
 		<div class="span5" style="text-align:center;">
 			<br>
-			<video id="vjs_video_1_html5_api" class="vjs-tech" poster="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/3a/be3d7069b511e3830cedf92d7d8fd4/DataScientistsToolbox.jpg?auto=format&dpr=1&w=451" style="" preload="metadata" data-js="previewVideo" src="{{course.preview_link}}" controls="" width = "451" height = "254">
-				<source src="{{course.preview_link}}" type="video/mp4"></source>
-				<!--<source src="https://d1a2y8pfnfh44t.cloudfront.net/660ccce0851111e3a36ccd7596303339/full/540p/index.webm" type="video/webm"></source>-->
-			</video>
+			<div class="visible-desktop">
+				<video id="vjs_video_1_html5_api" class="vjs-tech" poster="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/3a/be3d7069b511e3830cedf92d7d8fd4/DataScientistsToolbox.jpg?auto=format&dpr=1&w=451" style="" preload="metadata" data-js="previewVideo" src="{{course.preview_link}}" controls="" width = "451" height = "254">
+					<source src="{{course.preview_link}}" type="video/mp4"></source>
+					<!--<source src="https://d1a2y8pfnfh44t.cloudfront.net/660ccce0851111e3a36ccd7596303339/full/540p/index.webm" type="video/webm"></source>-->
+				</video>
+			</div>
+
+			<div class="hidden-desktop">
+				<video id="vjs_video_1_html5_api" class="vjs-tech" poster="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/3a/be3d7069b511e3830cedf92d7d8fd4/DataScientistsToolbox.jpg?auto=format&dpr=1&w=251" style="" preload="metadata" data-js="previewVideo" src="{{course.preview_link}}" controls="" width = "251" height = "254">
+					<source src="{{course.preview_link}}" type="video/mp4"></source>
+					<!--<source src="https://d1a2y8pfnfh44t.cloudfront.net/660ccce0851111e3a36ccd7596303339/full/540p/index.webm" type="video/webm"></source>-->
+				</video>
+			</div>
 		</div>
 		<br><br>
 	</div>
