@@ -47,30 +47,35 @@
         </div>
 
         <div id="content" class="container" >{% block content %} {% endblock %}</div>
-        <div id="footer" class="container" style="padding:20px 20px 20px 80px;">
+        <div id="footer" class="container" style="padding:20px 0px 20px 0px;">
             <div class="row-fluid">
-                <div class="span5">
-                    <img src="{% static "img/group10/coursera.png" %}"><br><br>
-                    <p style="font-size:16px;">Coursera provides universal access to the world’s best education, partnering with top universities and organizations to offer courses for anyone to take, for free. </p><br><br>
+                <div class="span5" style="padding-top:20px;">
+                    <a href="/courses"><img src="{% static "img/group10/coursera.png" %}"></a><br><br>
+                    <p style="font-size:16px;">Coursera provides universal access to the world’s best education, partnering with top universities and organizations to offer courses for anyone to take, for free. </p>
 
                     © 2014 Coursera Inc. All rights reserved.             
                 </div>
-                <div class="span3 pull-right">
-                    <p>
-                        <span style = "font-size:18px">Connect</span><br><br>
+                <div class="span7">
+                    <p style="padding:20px 20px 0px 20px;" class="pull-right visible-desktop">
+                        <span style = "font-size:18px">CONNECT</span><br><br>
                         <a href = "https://plus.google.com/+Coursera">Google+</a><br><br>
                         <a href = "http://facebook.com/Coursera">Facebook</a><br><br>
                         <a href = "https://twitter.com/coursera">Twitter</a><br><br>
                         <a href = "http://blog.coursera.org/">Blog</a><br><br>
-                </div>
-                <div class="span2 pull-right">
-                    <div class="row-fluid">
-                        <p>
-                            <span style = "font-size:18px">COMPANY</span><br><br>
-                            <a href = "/about" >About</a><br><br>
-                            <a href = "/university">Partners</a><br><br>
-                        </p>
-                    </div>
+                    </p>
+                    <p style="padding:20px 0px 0px 0px;" class="pull-left hidden-desktop">
+                        <span style = "font-size:18px">CONNECT</span><br><br>
+                        <a href = "https://plus.google.com/+Coursera">Google+</a><br><br>
+                        <a href = "http://facebook.com/Coursera">Facebook</a><br><br>
+                        <a href = "https://twitter.com/coursera">Twitter</a><br><br>
+                        <a href = "http://blog.coursera.org/">Blog</a><br><br>
+                    </p>
+
+                    <p style="padding:20px 20px 0px 20px;" class="pull-right">
+                        <span style = "font-size:18px">COMPANY</span><br><br>
+                        <a href = "/about" >About</a><br><br>
+                        <a href = "/university">Partners</a><br><br>
+                    </p>
                 </div>
             </div>
         </div>

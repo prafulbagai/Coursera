@@ -2,14 +2,13 @@
 {% load staticfiles %}
 {% block content %}
 	
-	<div class="row-fluid" style="padding:20px;">
+	<div class="row-fluid" style="padding:20px 0px 0px 0px; text-align:center">
 		<input type="text" class = "input-xxlarge" placeholder = 'Search Course' id="search">
 		<hr>
 	</div>
 
-	<div class="row-fluid" style="padding:20px 20px 20px 20px">	
-
-		<div class="span3">
+	<div class="row-fluid">	
+		<div class="span3 visible-desktop">
 			<div class="row-fluid">
 				<div class="span12">
 					<input type="checkbox" checked = "checked"><b>All Languages</b>
@@ -36,29 +35,30 @@
 					<div class="span2">{{count}}</div>
 				</div>
 			{% endfor %}
-
 		</div>
 
 		<div class="span9">
-			<h3>Courses</h3>
+			<h3 style="padding-left:10px;">Courses</h3>
 			<div id="courses">
 				{% for course,instructors in course_instructor_dict.items %}
-					<div class="row-fluid">
-						<div class="span2">
-							<img src="/static/img/group10/{{course.image_link}}">
+					<div class="row-fluid hoverDiv" style="padding:10px 0px 10px 0px;">
+						<div class="span2" style="padding:0px 10px 0px 10px">
+							<img src="/static/img/group10/{{course.image_link}}" class="course-img">
 						</div>
 
-						<div class="span8">
+						<div class="span8" style="padding-left:10px;">
 							<a href="/university/{{course.university.id}}">{{course.university.name}}</a><br>
 							<a href="/course/{{course.short_name}}">{{course.name}}</a><br>
-							With 
+							<span class= "visible-desktop">With 
 							{% for instructor in instructors %}
 								<a href="/instructors/{{instructor.instructor.id}}">{{instructor.instructor.first_name}} {{instructor.instructor.last_name}} </a> ,
 							{% endfor %}
+							</span>
 						</div>
 
-						<div class="span2">
-							{{ course.start_date}}<br>{{ course.duration_string }}
+						<div class="span2" style="padding-left:10px;">
+							<div class="hidden-desktop">{{ course.start_date}} ({{ course.duration_string }})</div>
+							<div class="visible-desktop">{{ course.start_date}} <br>{{ course.duration_string }}</div>
 						</div>
 					</div>
 					<hr>
