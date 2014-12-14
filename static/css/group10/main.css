@@ -27,7 +27,7 @@ body {
   transition: all 0.3s ease-out;
 }
 .wrap.active {
-  left: 19em;
+  left: 22em;
 }
 a.side-menu-link {
   float: left;
@@ -40,7 +40,7 @@ a.side-menu-link {
     width: auto;
     position: absolute;
     top: 0;
-    left: -19em;
+    left: -22em;
   }
 }
 
