@@ -66,7 +66,7 @@ function ajax_request(filter,search_val ){
 				for (i = 0; i< result.length; i++){
 					text += "<div class='row-fluid hoverDiv' style='padding:10px 0px 10px 0px;'>" +
 								"<div class='span2'  style='padding:0px 10px 0px 10px'>" + 
-									"<a href='/course/'" + result[i][3] + "><img src='/static/img/group10/" + result[i][0] + "' class='course-img'></a>" + 
+									"<a href='/course/" + result[i][3] + "'><img src='/static/img/group10/" + result[i][0] + "' class='course-img'></a>" + 
 								"</div>"+
 
 								"<div class='span8' style='padding-left:10px;'>" +
