@@ -5,10 +5,16 @@
 	<div class="row-fluid" style="padding:20px 0px 0px 0px; text-align:center">
 		<input type="text" class = "input-xxlarge" placeholder = 'Search Course' id="search">
 		<hr>
+		<a href="#menu" class="side-menu-link btn btn-mini " title="Click for sub-menu">
+				<i class="icon-th"></i>
+			</a>
+		<br>
+		
+
 	</div>
 
-	<div class="row-fluid">	
-		<div class="span3 visible-desktop">
+	<div class="row-fluid wrap" id="wrap">	
+		<div class="span3 oc" id="side-menu" style="padding:0px 10px 0px 10px;" role="navigation">
 			<div class="row-fluid">
 				<div class="span12">
 					<input type="checkbox" checked = "checked"><b>All Languages</b>
@@ -16,8 +22,8 @@
 			</div>
 			{% for language,count in language_dict.items %}
 				<div class="row-fluid">
-					<div class="span10"><input type="checkbox" id="{{language}}" class="language"> {{language}}</div>
-					<div class="span2">{{count}}</div>
+					<input type="checkbox" id="{{language}}" class="language"> {{language}} ( {{count}} )
+					
 				</div>
 			{% endfor %}
 			
@@ -31,8 +37,7 @@
 			</div>
 			{% for category,count in category_dict.items %}
 				<div class="row-fluid">
-					<div class="span10"><input type="checkbox" class="category" id="{{category}}"> {{category}}</div>
-					<div class="span2">{{count}}</div>
+					<input type="checkbox" class="category" id="{{category}}"> {{category}} ( {{count}} )<br><br>
 				</div>
 			{% endfor %}
 		</div>
@@ -43,7 +48,7 @@
 				{% for course,instructors in course_instructor_dict.items %}
 					<div class="row-fluid hoverDiv" style="padding:10px 0px 10px 0px;">
 						<div class="span2" style="padding:0px 10px 0px 10px">
-							<img src="/static/img/group10/{{course.image_link}}" class="course-img">
+							<a href="/course/{{course.short_name}}"><img src="/static/img/group10/{{course.image_link}}" class="course-img"></a>
 						</div>
 
 						<div class="span8" style="padding-left:10px;">
